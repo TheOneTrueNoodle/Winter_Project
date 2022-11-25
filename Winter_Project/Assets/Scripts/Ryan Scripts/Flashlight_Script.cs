@@ -7,6 +7,15 @@ public class Flashlight_Script : MonoBehaviour
     public GameObject Light;
     public float RotationSpeed;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            if(Light.gameObject.activeInHierarchy == true) { Light.SetActive(false); }
+            else { Light.SetActive(true); }
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
