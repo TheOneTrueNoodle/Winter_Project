@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40531274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -0.37, z: -10}
+  m_LocalPosition: {x: -1.18, y: -1.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,7 +367,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4056604, g: 0.20506844, b: 0.056129068, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -384,7 +384,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344359313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.7033, y: -0.4312, z: 0}
   m_LocalScale: {x: 32.118248, y: 16.151508, z: 1}
   m_ConstrainProportionsScale: 0
@@ -408,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &474228213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,13 +435,13 @@ MonoBehaviour:
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
+  m_NormalMapDistance: 2
   m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 1
   m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.007
+  m_ShadowVolumeIntensity: 0
   m_Vertices:
   - position: {x: 7.8, y: -1, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
@@ -950,7 +950,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.43510142, g: 0.68361855, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -977,8 +977,8 @@ Mesh:
     firstVertex: 0
     vertexCount: 16
     localAABB:
-      m_Center: {x: 0.000000014901161, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.5, z: 0}
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.47, y: 0.3, z: 0}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1057,7 +1057,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 704
-    _typelessdata: 0000003f000000bf000000000000803f0000008000000080000000800000003f000000bf0000003f000000bf0000003f0000003f00000000000000800000803f00000080000000800000003f0000003f0000003f0000003f0000003f00000000000000000000803f0000008000000080000000800000003f0000003f0000003f000000bf00008032000000bf0000000000000080000080bf00000000000000800000003f000000bfffffffbe000000bf000080320000003f00000000000000800000803f0000008000000080ffffffbe0000003f0000003f0000003fffffffbe000000bf0000000000000080000080bf0000000000000080ffffffbe000000bfffffffbe000000bfffffffbe0000000000000000000080bf000000800000008000000080ffffffbe000000bfffffffbe0000003fffffffbe0000003f00000000000080bf000000800000008000000080ffffffbe0000003fffffffbe0000003f0000003f00000000000000000000803f0000008000000080000000800000003f0000003f0000003f000000bf0000003f000000bf0000000000000080000080bf00000000000000800000003f000000bf0000003f000000bf0000003f0000003f000000000000803f0000008000000080000000800000003f0000003f0000003f0000003f000080320000003f00000000000000800000803f0000008000000080ffffffbe0000003f0000003f0000003f00008032000000bf0000000000000080000080bf00000000000000800000003f000000bfffffffbe000000bfffffffbe0000003f00000000000000800000803f0000008000000080ffffffbe0000003fffffffbe0000003fffffffbe000000bf00000000000080bf000000800000008000000080ffffffbe000000bfffffffbe000000bfffffffbe0000000000000000000080bf000000800000008000000080ffffffbe000000bfffffffbe0000003f
+    _typelessdata: d7a3f03e9a9999be000000000000803f000000800000008000000080d7a3f03e9a9999bed7a3f03e9a9999bed7a3f03e9a99993e00000000000000800000803f0000008000000080d7a3f03e9a99993ed7a3f03e9a99993ed7a3f03e00000000000000000000803f000000800000008000000080d7a3f03e9a99993ed7a3f03e9a9999be000000009a9999be0000000000000080000080bf0000000000000080d7a3f03e9a9999bed7a3f0be9a9999be000000009a99993e00000000000000800000803f0000008000000080d7a3f0be9a99993ed7a3f03e9a99993ed7a3f0be9a9999be0000000000000080000080bf0000000000000080d7a3f0be9a9999bed7a3f0be9a9999bed7a3f0be0000000000000000000080bf000000800000008000000080d7a3f0be9a9999bed7a3f0be9a99993ed7a3f0be9a99993e00000000000080bf000000800000008000000080d7a3f0be9a99993ed7a3f0be9a99993ed7a3f03e00000000000000000000803f000000800000008000000080d7a3f03e9a99993ed7a3f03e9a9999bed7a3f03e9a9999be0000000000000080000080bf0000000000000080d7a3f03e9a9999bed7a3f03e9a9999bed7a3f03e9a99993e000000000000803f000000800000008000000080d7a3f03e9a99993ed7a3f03e9a99993e000000009a99993e00000000000000800000803f0000008000000080d7a3f0be9a99993ed7a3f03e9a99993e000000009a9999be0000000000000080000080bf0000000000000080d7a3f03e9a9999bed7a3f0be9a9999bed7a3f0be9a99993e00000000000000800000803f0000008000000080d7a3f0be9a99993ed7a3f0be9a99993ed7a3f0be9a9999be00000000000080bf000000800000008000000080d7a3f0be9a9999bed7a3f0be9a9999bed7a3f0be0000000000000000000080bf000000800000008000000080d7a3f0be9a9999bed7a3f0be9a99993e
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1111,8 +1111,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.000000014901161, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5, z: 0}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.47, y: 0.3, z: 0}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
@@ -1187,7 +1187,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4528302, g: 0.23144269, b: 0.10423638, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1205,7 +1205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770012485}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.0499997, y: -0.7500007, z: 0}
+  m_LocalPosition: {x: 3.73, y: -0.45, z: 0}
   m_LocalScale: {x: 8.7499, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1227,16 +1227,16 @@ MonoBehaviour:
   m_ShadowGroup: 0
   m_ComponentVersion: 1
   m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
+  m_UseRendererSilhouette: 0
   m_CastsShadows: 1
-  m_SelfShadows: 0
+  m_SelfShadows: 1
   m_ApplyToSortingLayers: 00000000c16336d5
   m_ShapePath:
-  - {x: -0.49999997, y: -0.5, z: 0}
-  - {x: -0.49999997, y: 0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  m_ShapePathHash: -1669714441
+  - {x: -0.47, y: -0.3, z: 0}
+  - {x: -0.47, y: 0.3, z: 0}
+  - {x: 0.47, y: 0.3, z: 0}
+  - {x: 0.47, y: -0.3, z: 0}
+  m_ShapePathHash: 989458697
   m_Mesh: {fileID: 597833347}
   m_InstanceId: -40778
 --- !u!61 &770012489
@@ -1349,7 +1349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250651560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -0.37, z: -10}
+  m_LocalPosition: {x: -1.18, y: -1.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1487,7 +1487,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088414143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -0.37, z: 0}
+  m_LocalPosition: {x: -1.18, y: -1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1611,8 +1611,8 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.832
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 1
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
