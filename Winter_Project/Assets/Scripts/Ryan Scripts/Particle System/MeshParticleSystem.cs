@@ -6,7 +6,6 @@ using CodeMonkey;
 public class MeshParticleSystem : MonoBehaviour
 {
     private const int MAX_QUAD_AMOUNT = 15000;
-    [SerializeField] private GameObject Player;
 
     [System.Serializable]
     public struct ParticleUVPixels
@@ -24,12 +23,14 @@ public class MeshParticleSystem : MonoBehaviour
     private UVCoords[] uvCoordsArray;
 
     private Mesh mesh;
-
     private Vector3[] vertices;
     private Vector2[] uv;
     private int[] triangles;
-
     private int quadIndex;
+
+    private bool updateVertices;
+    private bool updateUV;
+    private bool updateTriangles;
 
     private void Awake()
     {
@@ -40,6 +41,11 @@ public class MeshParticleSystem : MonoBehaviour
         triangles = new int[6 * MAX_QUAD_AMOUNT];
 
         GetComponent<MeshFilter>().mesh = mesh;
+
+        mesh.vertices = vertices;
+        mesh.uv = uv;
+        mesh.triangles = triangles;
+        mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 10000f);
 
         //Set up internal UV Normalized Array
         Material material = GetComponent<MeshRenderer>().material;
@@ -59,31 +65,8 @@ public class MeshParticleSystem : MonoBehaviour
         }
         uvCoordsArray = uvCoordsList.ToArray();
     }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            OnMaterialGathered(Player);
-        }
-    }
- 
-    private void OnMaterialGathered(GameObject obj)
-    {
-        Vector3 quadPosition = obj.transform.position;
-        Vector3 quadSize = new Vector3(0.1f, 0.1f);
-        float rotation = 0f;
 
-        int spawnedQuadIndex = AddQuad(quadPosition, rotation, quadSize, true, 0);
-        FunctionUpdater.Create(() =>
-        {
-            quadPosition += new Vector3(1, 1) * Time.deltaTime;
-            quadSize += new Vector3(0.1f, 0.1f) * 3f * Time.deltaTime;
-            rotation += 360f * Time.deltaTime;
-            UpdateQuad(spawnedQuadIndex, quadPosition, rotation, quadSize, true, 0);
-        });
-    }
-
-    private int AddQuad(Vector3 position, float rotation, Vector3 quadSize, bool skewed, int uvIndex)
+    public int AddQuad(Vector3 position, float rotation, Vector3 quadSize, bool skewed, int uvIndex)
     {
         if (quadIndex >= MAX_QUAD_AMOUNT) return 0; //Mesh full
          
@@ -135,8 +118,27 @@ public class MeshParticleSystem : MonoBehaviour
         triangles[tIndex + 4] = vIndex2;
         triangles[tIndex + 5] = vIndex3;
 
-        mesh.vertices = vertices;
-        mesh.uv = uv;
-        mesh.triangles = triangles;
+        updateVertices = true;
+        updateUV = true;
+        updateTriangles = true;
+    }
+
+    private void LateUpdate()
+    {
+        if(updateVertices)
+        {
+            mesh.vertices = vertices;
+            updateVertices = false;
+        }
+        if (updateUV)
+        {
+            mesh.uv = uv;
+            updateUV = false;
+        }
+        if (updateTriangles)
+        {
+            mesh.triangles = triangles;
+            updateTriangles = false;
+        }
     }
 }

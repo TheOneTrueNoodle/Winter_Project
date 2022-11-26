@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject GFX;
 
+    private float spawnFootprint;
+    [SerializeField] private float footprintDelay = 50f;
+
     private void Start()
     {
         CanMove = true;
@@ -44,6 +47,15 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = MoveInput.normalized;
 
             rb.MovePosition(rb.position + moveDirection * currentSpeed * Time.fixedDeltaTime);
+            if(spawnFootprint <= 0)
+            {
+                FootstepParticleSystemHandler.Instance.SpawnFootprint(gameObject.transform.position, Vector3.zero);
+                spawnFootprint = footprintDelay;
+            }
+            else if(MoveInput.x != 0 || MoveInput.y != 0)
+            {
+                spawnFootprint--;
+            }
         }
     }
 }
