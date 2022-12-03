@@ -9,6 +9,8 @@ public class FootstepParticleSystemHandler : MonoBehaviour
     public MeshParticleSystem meshParticleSystem;
     private List<Single> singleList;
 
+    private byte UVindex = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -31,7 +33,12 @@ public class FootstepParticleSystemHandler : MonoBehaviour
 
     public void SpawnFootprint(Vector3 position, Vector3 direction)
     {
-        singleList.Add(new Single(position, direction, meshParticleSystem));
+        singleList.Add(new Single(position, direction, meshParticleSystem, UVindex));
+        UVindex++;
+        if (UVindex > 1)
+        {
+            UVindex = 0;
+        }
     }
 
     //Represents a single Footprint
@@ -44,20 +51,28 @@ public class FootstepParticleSystemHandler : MonoBehaviour
         private Vector3 quadSize;
         private float rotation;
 
-        public Single(Vector3 position, Vector3 direction, MeshParticleSystem meshParticleSystem)
+        private byte thisUVindex;
+
+        public Single(Vector3 position, Vector3 direction, MeshParticleSystem meshParticleSystem, byte UVindex)
         {
             this.position = position;
             this.direction = direction;
+
+            rotation = Mathf.Atan2(this.direction.y, this.direction.x) * Mathf.Rad2Deg;
+            rotation -= 90;
+             if (rotation < 0) rotation += 360;
+
             this.meshParticleSystem = meshParticleSystem;
 
-            quadSize = new Vector3(.2f, .2f);
+            quadSize = new Vector3(.1f, .2f);
 
-            quadIndex = meshParticleSystem.AddQuad(position, rotation, quadSize, true, 0);
+            quadIndex = meshParticleSystem.AddQuad(position, rotation, quadSize, true, UVindex);
+            thisUVindex = UVindex;
         }
 
         public void Update()
         {
-            meshParticleSystem.UpdateQuad(quadIndex, position, rotation, quadSize, true, 0);
+            meshParticleSystem.UpdateQuad(quadIndex, position, rotation, quadSize, true, thisUVindex);
         }
 
         public bool IsSpawned()

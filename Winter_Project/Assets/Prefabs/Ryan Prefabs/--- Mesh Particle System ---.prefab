@@ -48,8 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticleUVPixelsArray:
-  - uv00Pixels: {x: 0, y: 0}
-    uv11Pixels: {x: 400, y: 400}
+  - uv00Pixels: {x: 33, y: 72}
+    uv11Pixels: {x: 56, y: 120}
+  - uv00Pixels: {x: 65, y: 11}
+    uv11Pixels: {x: 89, y: 68}
 --- !u!33 &1956011427093200101
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -195,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticleUVPixelsArray:
   - uv00Pixels: {x: 0, y: 0}
-    uv11Pixels: {x: 400, y: 400}
+    uv11Pixels: {x: 128, y: 128}
 --- !u!33 &1956011427588486997
 MeshFilter:
   m_ObjectHideFlags: 0

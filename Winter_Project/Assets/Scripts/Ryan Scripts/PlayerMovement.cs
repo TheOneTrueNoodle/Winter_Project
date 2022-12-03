@@ -32,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (MoveInput.x > 0)
         {
-            GFX.transform.localScale = new Vector3(-1, 1, 1);
+            GFX.transform.localScale = new Vector3(1, 1, 1);
         }
         else if (MoveInput.x < 0)
         {
-            GFX.transform.localScale = new Vector3(1, 1, 1);
+            GFX.transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             rb.MovePosition(rb.position + moveDirection * currentSpeed * Time.fixedDeltaTime);
             if(spawnFootprint <= 0)
             {
-                FootstepParticleSystemHandler.Instance.SpawnFootprint(gameObject.transform.position, Vector3.zero);
+                FootstepParticleSystemHandler.Instance.SpawnFootprint(gameObject.transform.position, moveDirection);
                 spawnFootprint = footprintDelay;
             }
             else if(MoveInput.x != 0 || MoveInput.y != 0)
