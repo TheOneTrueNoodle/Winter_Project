@@ -24,7 +24,8 @@ public class CampFire : MonoBehaviour
         {
             fire.SetActive(true);
         }
-        else
+
+        if (timer.timerRunning == false)
         {
             fire.SetActive(false);
         }
