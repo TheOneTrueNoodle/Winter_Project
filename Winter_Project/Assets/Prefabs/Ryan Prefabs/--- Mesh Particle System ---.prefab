@@ -146,7 +146,7 @@ Transform:
   - {fileID: 1956011427588486999}
   - {fileID: 1956011427093200104}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1956011427588487003
 GameObject:
@@ -260,4 +260,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e03012e46da0cf41808b1b099f19d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gatheredMaterials: {fileID: 0}
   meshParticleSystem: {fileID: 1956011427588486996}
+  harvestSFX:
+  - Wood Break 1
+  - Wood Break 2
+  - Wood Break 3
+  - Wood Break 4
+  - Wood Break 5
+  - Wood Break 6
+  nextSFX: 0

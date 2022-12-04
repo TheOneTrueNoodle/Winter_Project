@@ -7,11 +7,18 @@ public class MaterialInteraction : MonoBehaviour
 {
     [SerializeField] private bool playerNearby;
 
+    private int remainingWood;
+
+    private void Start()
+    {
+        remainingWood = Random.Range(2, 6);
+    }
+
     private void Update()
     {
         if(playerNearby)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 OnMaterialGathered();
             }
@@ -23,6 +30,8 @@ public class MaterialInteraction : MonoBehaviour
         Vector3 direction = Random.insideUnitCircle.normalized;
 
         MaterialParticleSystemHandler.Instance.SpawnFragment(quadPosition, direction);
+        remainingWood--;
+        if(remainingWood <= 0) { Destroy(gameObject); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

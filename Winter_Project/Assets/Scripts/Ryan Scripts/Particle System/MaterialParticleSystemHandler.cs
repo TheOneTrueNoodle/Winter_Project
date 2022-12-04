@@ -6,11 +6,14 @@ public class MaterialParticleSystemHandler : MonoBehaviour
 {
     public static MaterialParticleSystemHandler Instance { get; private set; }
 
+    [SerializeField] private GatheredMaterials gatheredMaterials;
+
     public MeshParticleSystem meshParticleSystem;
     private List<Single> singleList;
 
     [SerializeField] private string[] harvestSFX;
     [SerializeField] private int nextSFX;
+
 
     private void Awake()
     {
@@ -37,6 +40,8 @@ public class MaterialParticleSystemHandler : MonoBehaviour
         StartCoroutine(AudioManager.instance.Play(harvestSFX[nextSFX]));
         nextSFX++;
         if (nextSFX > harvestSFX.Length - 1) { nextSFX = 0; }
+
+        gatheredMaterials.Increase(1);
 
         singleList.Add(new Single(position, direction, meshParticleSystem));
     }

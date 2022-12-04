@@ -94,8 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7790651670604227381}
   - component: {fileID: 7790651670604227380}
-  - component: {fileID: 7790651670604227403}
-  - component: {fileID: 7790651670604227402}
   - component: {fileID: 7790651670604227401}
   m_Layer: 0
   m_Name: Tree B
@@ -154,36 +152,7 @@ MonoBehaviour:
   - {x: -0.06962335, y: -0.45434976, z: 0}
   m_ShapePathHash: -1036055436
   m_Mesh: {fileID: 0}
-  m_InstanceId: -46698
---- !u!114 &7790651670604227403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7790651670604227400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cf99c16309b024e99218b871cfa719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNearby: 0
---- !u!58 &7790651670604227402
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7790651670604227400}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
+  m_InstanceId: -886246
 --- !u!61 &7790651670604227401
 BoxCollider2D:
   m_ObjectHideFlags: 0

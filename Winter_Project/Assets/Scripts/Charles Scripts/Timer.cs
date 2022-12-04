@@ -9,13 +9,6 @@ public class Timer : MonoBehaviour
     public float timer = 120f;
     public float reset = 120f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (timerRunning == true)
@@ -25,7 +18,6 @@ public class Timer : MonoBehaviour
             if (timer <= 0)
             {
                 timerRunning = false;
-
             }
         }
     }
