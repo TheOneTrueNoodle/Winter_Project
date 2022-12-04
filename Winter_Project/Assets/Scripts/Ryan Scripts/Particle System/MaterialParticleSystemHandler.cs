@@ -9,6 +9,9 @@ public class MaterialParticleSystemHandler : MonoBehaviour
     public MeshParticleSystem meshParticleSystem;
     private List<Single> singleList;
 
+    [SerializeField] private string[] harvestSFX;
+    [SerializeField] private int nextSFX;
+
     private void Awake()
     {
         Instance = this;
@@ -31,6 +34,10 @@ public class MaterialParticleSystemHandler : MonoBehaviour
 
     public void SpawnFragment(Vector3 position, Vector3 direction)
     {
+        StartCoroutine(AudioManager.instance.Play(harvestSFX[nextSFX]));
+        nextSFX++;
+        if (nextSFX > harvestSFX.Length - 1) { nextSFX = 0; }
+
         singleList.Add(new Single(position, direction, meshParticleSystem));
     }
 

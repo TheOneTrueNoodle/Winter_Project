@@ -22,7 +22,6 @@ public class MaterialInteraction : MonoBehaviour
         Vector3 quadPosition = transform.position;
         Vector3 direction = Random.insideUnitCircle.normalized;
 
-
         MaterialParticleSystemHandler.Instance.SpawnFragment(quadPosition, direction);
     }
 

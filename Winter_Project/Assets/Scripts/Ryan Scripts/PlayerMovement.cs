@@ -42,6 +42,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(MoveInput.x == 0 && MoveInput.y == 0)
+        {
+            StartCoroutine(AudioManager.instance.Stop("Footsteps"));
+        }
+        else
+        {
+            StartCoroutine(AudioManager.instance.Play("Footsteps"));
+        }
         if (CanMove == true)
         {
             moveDirection = MoveInput.normalized;
@@ -49,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             rb.MovePosition(rb.position + moveDirection * currentSpeed * Time.fixedDeltaTime);
             if(spawnFootprint <= 0)
             {
-                FootstepParticleSystemHandler.Instance.SpawnFootprint(gameObject.transform.position, moveDirection);
+                FootstepParticleSystemHandler.Instance.SpawnFootprint(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 1), moveDirection);
                 spawnFootprint = footprintDelay;
             }
             else if(MoveInput.x != 0 || MoveInput.y != 0)

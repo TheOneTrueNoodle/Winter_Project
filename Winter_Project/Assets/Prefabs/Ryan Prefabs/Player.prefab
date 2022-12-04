@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 6760355795324046882}
   - component: {fileID: 6760355795324046884}
   - component: {fileID: 6760355795324046883}
+  - component: {fileID: 1328364438524356464}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -231,7 +232,7 @@ Transform:
   - {fileID: 6760355795270747573}
   - {fileID: 148743804}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6760355795324046880
 MonoBehaviour:
@@ -301,6 +302,14 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!81 &1328364438524356464
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760355795324046943}
+  m_Enabled: 1
 --- !u!1 &6760355795826644871
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +382,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 13a5c7ccd43411544a2fe21bd719f2b8, type: 3}
   m_Color: {r: 0.43510142, g: 0.68361855, b: 0.9150943, a: 1}
   m_FlipX: 0
