@@ -17,7 +17,7 @@ public class WendigoHidingState : WendigoBaseState
         
     }
     
-    public override void OnTrig(WendigoStateManager wendigo)
+    public override void OnTrig(WendigoStateManager wendigo, Collider2D other)
     {
         
     }

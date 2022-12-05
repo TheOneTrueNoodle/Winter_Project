@@ -42,10 +42,12 @@ public class WendigoStateManager : MonoBehaviour
         state.EnterState(this);
     }
 
-    public void OnTriggerEnter2D(Collider2D col)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        currentState.OnTrig(this);
-        
+        if (other.tag == "Player")
+        {
+            currentState.OnTrig(this, other);
+        }
     }
 
     public void OnTriggerExit2D(Collider2D other)

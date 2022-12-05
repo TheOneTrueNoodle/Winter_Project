@@ -22,7 +22,7 @@ public class WendigoTrackingState : WendigoBaseState
 
     }
 
-    public override void OnTrig(WendigoStateManager wendigo)
+    public override void OnTrig(WendigoStateManager wendigo, Collider2D other)
     {
         wendigo.trackingTrigger.enabled = false;
         wendigo.pauseTrigger.enabled = true;

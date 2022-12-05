@@ -8,7 +8,7 @@ public abstract class WendigoBaseState
 
    public abstract void OnCollide(WendigoStateManager wendigo);
 
-   public abstract void OnTrig(WendigoStateManager wendigo);
+   public abstract void OnTrig(WendigoStateManager wendigo, Collider2D other);
 
    public abstract void OnTrigExit(WendigoStateManager wendigo);
 }
