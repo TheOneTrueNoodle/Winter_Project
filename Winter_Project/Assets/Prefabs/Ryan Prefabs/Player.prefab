@@ -633,7 +633,7 @@ Transform:
   - {fileID: 148743804}
   - {fileID: 812434862}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6760355795324046880
 MonoBehaviour:
@@ -700,8 +700,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.12, y: -0.5}
+  m_Size: {x: 0.678648, y: 1.0794635}
   m_Direction: 0
 --- !u!81 &1328364438524356464
 AudioListener:
@@ -797,7 +797,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 13a5c7ccd43411544a2fe21bd719f2b8, type: 3}
   m_Color: {r: 0.43510142, g: 0.68361855, b: 0.9150943, a: 1}
   m_FlipX: 0

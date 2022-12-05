@@ -12,13 +12,13 @@ public class Campfire : MonoBehaviour
     [SerializeField] private float reset = 60f;
 
     private GameObject player;
-    private bool playerNearby;
+    [SerializeField] private bool playerNearby = false;
 
     [SerializeField] private AudioSource audioSource;
 
     private void Update()
     {
-        if(playerNearby)
+        if(playerNearby == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
