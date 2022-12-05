@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public bool CanMove;
-
+    public bool isInTrigger = false;
+    
     //Variables for Controls
     private Vector2 MoveInput;
     private Vector2 moveDirection;
